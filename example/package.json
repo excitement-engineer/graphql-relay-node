@@ -1,0 +1,24 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "start": "backpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "graphql-relay": "^0.5.5",
+    "graphql-relay-node": "../"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.7.0",
+    "flow-bin": "^0.72.0"
+  }
+}
