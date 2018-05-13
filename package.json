@@ -8,16 +8,22 @@
     "build": "npm run build:babel && npm run build:flow",
     "build:babel": "babel index.js --out-file build.js",
     "build:babel:watch": "babel index.js --watch --out-file build.js",
-    "build:flow": "cp index.js build.flow.js"
+    "build:flow": "cp index.js build.flow.js",
+    "test": "jest",
+    "ci": "npm run flow check && npm t"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "flow-bin": "^0.72.0"
+    "flow-bin": "^0.72.0",
+    "graphql": "^0.13.2",
+    "graphql-relay": "^0.5.5",
+    "jest": "^22.4.3"
   }
 }

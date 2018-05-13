@@ -24,6 +24,7 @@ export default class NodeFetcher {
 
   async fetch(globalId: string, expectedNodeType?: ?string): Promise<any> {
     const resolvedId = this._fromGlobalId(globalId);
+
     const { type, id } = resolvedId;
 
     if (!(type && id)) {
@@ -55,7 +56,7 @@ export default class NodeFetcher {
 
   _nodeNotTypeFoundError(globalId: string, type: string): Error {
     return new this._customError(
-      `Could not resolve to ${String(
+      `Could not resolve to a ${String(
         type
       )} node with the global id of '${globalId}'.`
     );
