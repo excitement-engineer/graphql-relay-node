@@ -1,6 +1,6 @@
 # GraphQL-relay-node
 
-This library aims to help manage global ids as is typical in a relay-compliant graphql schema.
+Simplify managing global ids used in graphql-relay
 
 > A basic understanding of GraphQL and relay-compliant schemas is needed to provide context for this library.
 

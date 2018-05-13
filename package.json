@@ -1,20 +1,26 @@
 {
   "name": "graphql-relay-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "build.js",
+  "description": "Simplify managing global ids used in graphql-relay",
+  "main": "index.js",
   "scripts": {
     "flow": "flow",
     "build": "npm run build:babel && npm run build:flow",
-    "build:babel": "babel index.js --out-file build.js",
-    "build:babel:watch": "babel index.js --watch --out-file build.js",
-    "build:flow": "cp index.js build.flow.js",
+    "build:babel": "babel src/index.js --out-file index.js",
+    "build:babel:watch": "babel src/index.js --watch --out-file index.js",
+    "build:flow": "cp src/index.js index.js.flow",
     "test": "jest",
-    "ci": "npm run flow check && npm t"
+    "ci": "npm run flow check && npm t",
+    "prepublishOnly": ". ./resources/prepublish.sh"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["graphql", "graphql-relay"],
+  "author": "Dirk-Jan Rutten",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "index.js.flow",
+    "README.md"
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.3",
