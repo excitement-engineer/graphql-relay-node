@@ -5,25 +5,19 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow",
-    "build": "npm run build:babel && npm run build:flow && npm run build:package-json",
+    "build":
+      "npm run build:babel && npm run build:flow && npm run build:package-json",
     "build:babel": "babel src/index.js --out-file index.js",
     "build:package-json": "node ./resources/clean-package-json.js",
     "build:flow": "cp src/index.js index.js.flow",
     "test": "jest",
     "ci": "npm run flow check && npm t",
-    "prepublishOnly": ". ./resources/prepublish.sh"
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "graphql",
-    "graphql-relay"
-  ],
+  "keywords": ["graphql", "graphql-relay"],
   "author": "Dirk-Jan Rutten",
   "license": "MIT",
-  "files": [
-    "index.js",
-    "index.js.flow",
-    "README.md"
-  ],
+  "files": ["index.js", "index.js.flow", "README.md"],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.3",
