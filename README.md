@@ -4,6 +4,16 @@ Simplify managing global ids used in graphql-relay
 
 > A basic understanding of GraphQL and relay-compliant schemas is needed to provide context for this library.
 
+##Install
+
+Install using the command:
+
+```
+npm install --save graphql-relay-node
+```
+
+## Motivation
+
 [Graphql-relay](https://github.com/graphql/graphql-relay-js) creates a global id for use in the graphql schema by concatenating the graphql type and the id of the node using the methods `fromGlobalId` and `toGlobalId`.
 
 In a relay compliant schema it is common to use these global ids in order to perform mutations on specific node. Consider the following mutation:
